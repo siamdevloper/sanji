@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    touch-action: manipulation;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes particleFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(0);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2) translateY(-40px);
+  }
+}
+
+/* =========================================
+   LUXURY LIQUID GLASS ULTRA STYLES
+========================================= */
+.ultra-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(28px) saturate(210%);
+  -webkit-backdrop-filter: blur(28px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4),
+              0 10px 25px rgba(244, 63, 130, 0.2),
+              inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.5),
+              inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ultra-glass-pink {
+  background: linear-gradient(145deg, rgba(255, 51, 136, 0.22) 0%, rgba(244, 63, 130, 0.08) 100%);
+  backdrop-filter: blur(26px) saturate(200%);
+  -webkit-backdrop-filter: blur(26px) saturate(200%);
+  border: 1px solid rgba(255, 105, 180, 0.45);
+  box-shadow: 0 20px 45px rgba(255, 51, 136, 0.3),
+              inset 0 1.5px 2.5px rgba(255, 255, 255, 0.7);
+}
+
+.ultra-glass-cyan {
+  background: linear-gradient(145deg, rgba(0, 240, 255, 0.2) 0%, rgba(34, 211, 238, 0.06) 100%);
+  backdrop-filter: blur(26px) saturate(200%);
+  -webkit-backdrop-filter: blur(26px) saturate(200%);
+  border: 1px solid rgba(0, 240, 255, 0.45);
+  box-shadow: 0 20px 45px rgba(0, 240, 255, 0.3),
+              inset 0 1.5px 2.5px rgba(255, 255, 255, 0.7);
+}
+
+.ultra-glass-white {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.08) 100%);
+  backdrop-filter: blur(26px) saturate(200%);
+  -webkit-backdrop-filter: blur(26px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 45px rgba(255, 255, 255, 0.25),
+              inset 0 1.5px 3px rgba(255, 255, 255, 0.9);
+}
+
+.prismatic-border {
+  position: relative;
+}
+.prismatic-border::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(255, 51, 136, 0.6), rgba(0, 240, 255, 0.6), rgba(255, 230, 0, 0.6), rgba(255, 51, 136, 0.6));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* =========================================
+   NEO-BRUTALISM RETRO POP STYLES
+========================================= */
+.neo-card {
+  background: #fff0f6;
+  border: 3.5px solid #18181b;
+  box-shadow: 6px 6px 0px #18181b;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neo-card:active {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0px #18181b;
+}
+
+.neo-pink {
+  background: #ff1493;
+  border: 3.5px solid #18181b;
+  box-shadow: 6px 6px 0px #18181b;
+  color: #ffffff;
+}
+
+.neo-cyan {
+  background: #00f0ff;
+  border: 3.5px solid #18181b;
+  box-shadow: 6px 6px 0px #18181b;
+  color: #18181b;
+}
+
+.neo-yellow {
+  background: #ffe600;
+  border: 3.5px solid #18181b;
+  box-shadow: 6px 6px 0px #18181b;
+  color: #18181b;
+}
+
+.neo-white {
+  background: #ffffff;
+  border: 3.5px solid #18181b;
+  box-shadow: 6px 6px 0px #18181b;
+  color: #18181b;
+}
+
+.neo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 2.5px solid #18181b;
+  box-shadow: 3px 3px 0px #18181b;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+/* =========================================
+   TEXT GLOWS & PRISMATIC TEXT
+========================================= */
+.text-glow-pink {
+  text-shadow: 0 0 20px rgba(255, 51, 136, 0.85), 0 0 45px rgba(255, 51, 136, 0.45);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.85), 0 0 45px rgba(0, 240, 255, 0.45);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.95), 0 0 45px rgba(255, 255, 255, 0.55);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 20px rgba(255, 230, 0, 0.85), 0 0 45px rgba(255, 230, 0, 0.45);
+}
+
+/* Marquee Scrolling Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 16s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* 3D Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 51, 136, 0.35);
+  border-radius: 9999px;
+}
